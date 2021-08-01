@@ -4,7 +4,7 @@
 
     /* ----- COLORES ----- */
     /* ------ CAMBIA TU COLOR FAVORITO ----- */
-    --hue-color: 250; /* Purpura 250 - Verde 142 - Azúl 230 - Rosado 340 */
+    --hue-color: 230; /* Purpura 250 - Verde 142 - Azúl 230 - Rosado 340 */
 
     /* ----- HSL COLOR MODE ----- */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -51,7 +51,7 @@
     --z-modal: 1000;
 
     /* ----- FONT SIZE FOR LARGE DEVICES ----- */
-    @media screen and (min-width: 968px) {
+    @media only screen and (min-width: 968px) {
         --big-font-size: 3rem;
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.5rem;
@@ -135,10 +135,202 @@ img {
     gap: 1.5rem;
 }
 
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
 /* ------------------ NAV ------------------ */
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.nav__logo,
+.nav__toggle {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
 
-/* -------------- Mostrar Menú ------------- */
+.nav__logo:hover {
+    color: var(--first-color);
+}
 
+.nav__toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover {
+    color: var(--first-color);
+}
+
+@media only screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: .2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4p rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.nav__icon {
+    font-size: 1.2rem;
+}
+
+.nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color)
+}
+
+.nav__close:hover {
+    color: var(--first-color-alt);
+}
+
+/* -------------- Mostrar y Ocultar Menú ------------- */
+.show-menu {
+    bottom: 0;
+}
 
 /* -------------- LINK ACTIVO -------------- */
+
+/* ------------------- HOME ----------------- */
+.home__container {
+    gap: 1rem;
+}
+
+.home__content {
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+
+.home__social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home__social-icon {
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+
+.home__social-icon:hover {
+    color: var(--first-color-alt);
+}
+
+.home__blog {
+    width: 200px;
+    fill: var(--first-color);
+}
+
+.home__blog-img {
+    width: 150px;
+}
+
+.home__data {
+    grid-column: 1/3;
+}
+
+.home__title {
+    font-size: var(--big-font-size);
+}
+
+.home__subtitle {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home__description {
+    margin-bottom: var(--mb-2);
+}
+
+.home__scroll {
+    display: none;
+}
+
+.home__scroll-button {
+    color: var(--first-color);
+    transition: .3s;
+}
+
+.home__scroll-button:hover {
+    transform: translateY(.25rem);
+}
+
+.home__scroll-mouse {
+    font-size: 2rem;
+}
+
+.home__scroll-name {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+}
+
+.home__scroll-arrow {
+    font-size: 1.25rem;
+}
+
+/* ------- BUTTONS -------- */
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #FFF;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.button__icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+}
