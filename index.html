@@ -26,7 +26,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">
+                            <a href="#home" class="nav__link active-link">
                                 <i class="uil uil-estate nav__icon"></i> Home
                             </a>
                         </li>
@@ -60,6 +60,9 @@
                 </div>
 
                 <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="uil uil-moon change__theme" id="theme-button"></i>
+
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
@@ -77,10 +80,6 @@
                             <a href="https://github.com/JuanDevH" target="_blank" class="home__social-icon">
                                 <i class="uil uil-github-alt"></i>
                             </a>
-
-                            <a href="https://www.instagram.com/juandev_30/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-instagram"></i>
-                            </a>
                         </div>
 
                         <div class="home__img">
@@ -96,7 +95,7 @@
                                     165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blog-img" x="30" y="-10"  href="images/perfil.jpg"/>
+                                    <image class="home__blog-img" x="30" y="5"  href="images/perfil.webp"/>
                                 </g>
                             </svg>
                         </div>
@@ -137,9 +136,7 @@
                                 <span class="about__info-title">02+</span>
                                 <span class="about__info-name">Years <br> experience</span>
                             </div>
-                        </div>
 
-                        <div class="about__info">
                             <div>
                                 <span class="about__info-title">07+</span>
                                 <span class="about__info-name">Completed <br> Project</span>
@@ -283,7 +280,7 @@
                         </div>
                     </div>
 
-                    <div class="qualification_section">
+                    <div class="qualification__sections">
                         <!----------------- QUALIFICATION CONTENT 1 ------------------->
                         <div class="qualification__content qualification__active" data-content id="education">
                             <!----------------- QUALIFICATION 1 ------------------->
@@ -544,26 +541,180 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
 
+                        <!------------------- PORTFOLIO 4---------------------->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./images/proyecto4.png" alt="project"  class="portfolio__img">
+                            
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Modern Website</h3>
+                                <p class="portfolio__description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                <a href="https://juandevh-landingpage.netlify.app" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Demo <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!------------------- PORTFOLIO 5---------------------->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="./images/proyecto5.png" alt="project"  class="portfolio__img">
+                            
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Modern Website</h3>
+                                <p class="portfolio__description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                <a href="https://administrador-de-pacientes-juanh.netlify.app   " target="_blank" class="button button--flex button--small portfolio__button">
+                                    Demo <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Add Arrows -->
                     <div class="swiper-button-next">
                         <i class="uil uil-angle-right-b swiper__portfolio-icon"></i> 
                     </div>
+
                     <div class="swiper-button-prev">
                         <i class="uil uil-angle-left-b swiper__portfolio-icon"></i>
                     </div>
-                      
+                        
                     <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>   
+                    <div class="swiper-pagination"></div>  
+                </div>
+            </section>
+
+            <!------------- PROJECT IN MIND -------------->
+            <section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">You have a new project</h2>
+                            <p class="project__description">Contact me now and get a 30% discount on your new project.</p>
+                            <a href="#contact" class="button button--flex button--white">
+                                Contact Me 
+                                <i class="uil uil-message project__icon button__icon"></i>
+                            </a>
+                        </div>
+
+                        <img src="./images/project.jpg" alt="project in mind" class="project__img">
+                    </div>
+                </div>
+            </section>
+
+            <!------------------ CONTACT ME -------------------->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Call Me</h3>
+                                <span class="contact__subtitle">+584264852629</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">juandev30@protonmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Venezuela - Cumaná Av. Cancamure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="juandev30@protonmail.com" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="name" class="contact__label">Name</label>
+                                <input type="text" id="name" class="contact__input">
+                            </div>
+
+                            <div class="contact__content">
+                                <label for="email" class="contact__label">Email</label>
+                                <input type="email" id="email" class="contact__input">
+                            </div>
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="project" class="contact__label">Project</label>
+                            <input type="text" id="project" class="contact__input">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="message" class="contact__label">Message</label>
+                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input resizeMessage"></textarea>
+                        </div>
+
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
 
         <!-------------------- FOOTER -------------------->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">JuanDev</h1>
+                        <span class="footer__subtitle">Frontend developer</span>
+                    </div>
 
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+
+                        <li>
+                            <a href="#portfolio" class="footer__link">Portfolio</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer__link">Contact Me</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.facebook.com/JuanDev30/" target="_blank" class="footer__social">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+
+                        <a href="https://twitter.com/Juandev10" target="_blank" class="footer__social">
+                            <i class="uil uil-twitter-alt"></i>
+                        </a>
+
+                        
+                        <a href="https://www.instagram.com/juandev_30/" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="footer__copy">&#169; JuanDev. All right reserved</p>
+            </div>
+        </footer>
 
         <!----------------- SCROLL TOP ------------------->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
 
         <!-------------------- SWIPER JS -------------------->
         <script src="./js/swiper-bundle.min.js"></script>
